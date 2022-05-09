@@ -28,6 +28,9 @@
 
 // return masked string
 function maskify(string) {
+	//return string.substring(0, string.length - 4).replace(/./g, '#') + string.slice(string.length - 4)
+
+
 	let four_char = string.slice(string.length - 4)
 	return string.length > 4 ? string.replace(four_char, '').replace(/[a-z0-9]/gm, "#") + four_char : string
 }
